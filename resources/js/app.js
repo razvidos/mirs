@@ -1,21 +1,9 @@
 import {createApp} from "vue";
-import ExampleComponent from "./components/ExampleComponent.vue";
-import axios, {isCancel, AxiosError} from 'axios';
+import Application from "./components/Application.vue";
 
+import axios from 'axios';
 
-createApp(ExampleComponent).mount('#app');
+const app = createApp(Application);
 
-axios.post(import.meta.env.VITE_FIRE_BASE_URL + 'hotel.json', {
-    params: {
-        name: 'Hreshtyk Hotel', city: 'Kyiv',
-    }
-})
-    .then(function (response) {
-        console.log(response);
-    })
-    .catch(function (error) {
-        console.log(error);
-    })
-    .finally(function () {
-        // always executed
-    });
+app.config.globalProperties.$http = axios;
+app.mount('#app');
