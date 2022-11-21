@@ -1,7 +1,10 @@
 <template>
     <error-message>{{ error }}</error-message>
-    <label for="">SQL Console</label>
-    <input type="text" v-model="queryText">
+    <h1>SQL Console</h1>
+    <textarea type="text" v-model="queryText" rows="5" cols="50">
+    </textarea>
+    <button @click="SetUp('*')">*</button>
+    <br>
     <button @click="runQuery">Run</button>
 </template>
 
@@ -14,6 +17,7 @@ export default {
         return {
             queryText: "",
             error: "",
+            setups: {'*': 'select * from hotels where 1=1'},
         }
     },
     provide: ['hotelList'],
@@ -34,16 +38,20 @@ export default {
                 this.$http.post('/query', params)
                     .then(response => {return response.data;})
                     .then(hotelList => {
-                        /*this.$emit('enemyLoad', result)*/
                         this.$emit('updateHotelList', hotelList);
                         this.hotelList = hotelList;
                     });
             }
+        },
+        SetUp(key) {
+            this.queryText = this.setups[key];
         }
     }
 }
 </script>
 
 <style scoped>
-
+button {
+    margin: 0 10px;
+}
 </style>

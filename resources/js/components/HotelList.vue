@@ -4,7 +4,6 @@
         <ul>
             <li v-for="item in modelValue">[{{ item.id }}] {{ item.name }} - {{ item.address }}</li>
         </ul>
-        <button @click="myFunc">$root.myVar2</button>
     </div>
 </template>
 
@@ -12,13 +11,6 @@
 export default {
     name: "HotelList",
     props: ['modelValue'],
-    data() {
-        return {
-            // hotelList: {},
-        }
-    },
-    methods: {
-    },
 }
 </script>
 
