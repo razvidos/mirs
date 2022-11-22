@@ -17,7 +17,7 @@ export default {
         return {
             queryText: "",
             error: "",
-            setups: {'*': 'select * from hotels where 1=1'},
+            setups: {'*': "select *\nfrom hotels\nwhere 1=1"},
         }
     },
     provide: ['hotelList'],
@@ -34,7 +34,6 @@ export default {
         runQuery() {
             if (this.queryText) {
                 const params = {queryText: this.queryText};
-                console.log(params);
                 this.$http.post('/query', params)
                     .then(response => {return response.data;})
                     .then(hotelList => {

@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Hotel;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class HotelSeeder extends Seeder
@@ -13,7 +12,7 @@ class HotelSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         Hotel::factory(10)->create();
     }

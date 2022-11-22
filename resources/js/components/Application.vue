@@ -4,7 +4,7 @@
         <li>
             <Console @update-hotel-list="enemyUpdate" />
         </li>
-        <li>
+        <li v-show="hotelList.length">
             <HotelList v-model="hotelList" />
         </li>
     </ul>
@@ -18,28 +18,13 @@ export default {
     components: {Console, HotelList},
     data() {
         return {
-            hotelList: [{id: 1}, {id: 2}, {id: 3}],
+            hotelList: [],
         }
     },
     methods: {
         enemyUpdate(list) {
-            // console.log(list);
             this.hotelList = list;
         }
-    },
-    watch: {
-      myVar2 (value) {
-          console.log(value);
-          console.log(this.$root.myVar2);
-      }
-    },
-    mounted() {
-        this.$root.myVar = 1;
-        console.log(this.$root.myVar2);
-        console.log(this.myVar2);
-        // this.$root.on('update:hotelList', hotelList => {
-        //     console.log(hotelList);
-        // });
     },
 }
 </script>

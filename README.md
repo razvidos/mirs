@@ -9,14 +9,20 @@
 4. install nodejs
    https://nodejs.org/en/download/
 
+#### Зібрати фронт:
+`npm run build`
+
 #### Запустити сервер Laravel:
 `php artisan serve`
 
 В консоль буде виведене посилання сайту:
 `INFO  Server running on [http://127.0.0.1:8000].`
 
-#### Зібрати фронт:
-`npm run build`
+#### .env
+Треба створити файл .env у корні проєкту (.env.example для прикладу).
+`DB_DATABASE=<path_to_database>` вказати повний шлях до файлу бази
+
+https://laravel.com/docs/9.x/configuration
 
 #### Запустити міграції
 `php artisan migrate`
