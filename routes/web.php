@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LabaController;
 use App\Http\Controllers\QueryController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,4 @@ Route::post('/runQuery', [QueryController::class, 'runQuery']);
 Route::resource('query', QueryController::class)
     ->only(['index', 'store', 'destroy'])
 ;
+Route::get('laba1', [LabaController::class, 'laba1']);
