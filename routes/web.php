@@ -19,4 +19,4 @@ Route::get('/', static function () {
 });
 
 Route::post('/query', [QueryController::class, 'runQuery']);
-Route::get('/test', static function () {return 123;});
+Route::get('/test', static function () {return 1234;});
