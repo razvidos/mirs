@@ -22,9 +22,6 @@
     },
     "dependencies": {
         "vue-loader": "^17.0.1"
-    },
-    "engines": {
-        "node": ">=0.10.3 <15",
-        "npm": "~1.0.20"
+
     }
 }
