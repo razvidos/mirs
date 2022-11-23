@@ -18,5 +18,7 @@ Route::get('/', static function () {
     return view('welcome');
 });
 
-Route::post('/query', [QueryController::class, 'runQuery']);
-Route::get('/test', static function () {return 1234;});
+Route::post('/runQuery', [QueryController::class, 'runQuery']);
+Route::resource('query', QueryController::class)
+    ->only(['index', 'store', 'destroy'])
+;
