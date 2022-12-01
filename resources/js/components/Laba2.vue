@@ -1,8 +1,8 @@
 <template>
-    <header>Application</header>
+    <header>Laba 2</header>
     <ul>
         <li>
-            <Console @update-hotel-list="enemyUpdate" />
+
         </li>
         <li v-show="hotelList.length">
             <HotelList v-model="hotelList" />
