@@ -1,9 +1,18 @@
 <template>
+    <v-app :theme="theme">
+        <v-btn
+            :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
+            @click="toggleTheme"
+        >Toggle Theme</v-btn>
+        <v-app-bar title="Application"></v-app-bar>
+
+        <v-navigation-drawer>...</v-navigation-drawer>
+
+        <v-main>
+            <router-view></router-view>
+        </v-main>
+    </v-app>
     <Navigation/>
-    <!-- Dynamic view based on routing system here -->
-    <main>
-        <router-view></router-view>
-    </main>
 </template>
 
 <script>
@@ -12,6 +21,16 @@ export default {
     name: "App",
     components: {
         Navigation
+    },
+    data() {
+        return {
+            theme: "dark"
+        }
+    },
+    methods: {
+        toggleTheme() {
+            this.theme = this.theme === "light"? "dark" : "light"
+        }
     }
 }
 </script>

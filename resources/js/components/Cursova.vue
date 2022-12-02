@@ -1,9 +1,6 @@
 <template>
-    <header>Application</header>
+    <Console @update-hotel-list="enemyUpdate" />
     <ul>
-        <li>
-            <Console @update-hotel-list="enemyUpdate" />
-        </li>
         <li v-show="hotelList.length">
             <HotelList v-model="hotelList" />
         </li>
@@ -11,8 +8,8 @@
 </template>
 
 <script>
-import Console from "./Console.vue";
-import HotelList from "./HotelList.vue";
+import Console from "./cursova/Console.vue";
+import HotelList from "./cursova/HotelList.vue";
 
 export default {
     name: "Application",
@@ -30,7 +27,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 * {
     box-sizing: border-box;
 }
@@ -80,10 +77,10 @@ header {
 /*    padding: 0.05rem 1rem;*/
 /*    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);*/
 /*}*/
-#app button:hover,
-#app button:active {
-    background-color: #ec3169;
-    border-color: #ec3169;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
-}
+/*#app button:hover,*/
+/*#app button:active {*/
+/*    background-color: #ec3169;*/
+/*    border-color: #ec3169;*/
+/*    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);*/
+/*}*/
 </style>
