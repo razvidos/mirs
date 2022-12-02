@@ -6,13 +6,13 @@
         >Toggle Theme</v-btn>
         <v-app-bar title="Application"></v-app-bar>
 
-        <v-navigation-drawer>...</v-navigation-drawer>
+<!--        <v-navigation-drawer></v-navigation-drawer>-->
 
         <v-main>
             <router-view></router-view>
         </v-main>
     </v-app>
-    <Navigation/>
+<!--    <Navigation/>-->
 </template>
 
 <script>

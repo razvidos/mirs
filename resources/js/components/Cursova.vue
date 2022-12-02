@@ -1,10 +1,6 @@
 <template>
     <Console @update-hotel-list="enemyUpdate" />
-    <ul>
-        <li v-show="hotelList.length">
-            <HotelList v-model="hotelList" />
-        </li>
-    </ul>
+    <HotelList v-if="hotelList.length" v-model="hotelList" />
 </template>
 
 <script>

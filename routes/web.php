@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/runQuery', [QueryController::class, 'runQuery']);
 Route::resource('query', QueryController::class)
-    ->only(['index', 'store', 'destroy'])
-;
+    ->only(['index', 'store', 'destroy']);
 
 Route::get('/{any}', [SinglePageController::class, 'index'])->where('any', '.*');
