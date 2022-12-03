@@ -1,6 +1,7 @@
 import {createApp} from "vue";
 import {createVuetify} from 'vuetify';
 import {createRouter, createWebHashHistory} from "vue-router";
+import 'vuetify/styles'
 import axios from 'axios';
 import Lang from 'lang.js';
 

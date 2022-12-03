@@ -1,22 +1,16 @@
 <template>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <router-link to="/curs">Курсова</router-link>
-                </li>
-                <li>
-                    <router-link to="/laba1">Лаба 1</router-link>
-                </li>
-                <li>
-                    <router-link to="/laba2">Лаба 2</router-link>
-                </li>
-                <li>
-                    <router-link to="/laba3">Лаба 3</router-link>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <router-link to="/curs">
+        <v-btn>Курсова</v-btn>
+    </router-link>
+    <router-link to="/laba1">
+        <v-btn>Лаба 1</v-btn>
+    </router-link>
+    <router-link to="/laba2">
+        <v-btn>Лаба 2</v-btn>
+    </router-link>
+    <router-link to="/laba3">
+        <v-btn>Лаба 3</v-btn>
+    </router-link>
 </template>
 
 <script>
