@@ -20,4 +20,5 @@ Route::post('/runQuery', [QueryController::class, 'runQuery']);
 Route::resource('query', QueryController::class)
     ->only(['index', 'store', 'destroy']);
 
-Route::get('/{locale}', [SinglePageController::class, 'index'])->where('any', '.*');
+Route::get('/{locale}', [SinglePageController::class, 'index'])
+    ->where('any', '.*');

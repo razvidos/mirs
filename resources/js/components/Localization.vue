@@ -1,7 +1,9 @@
 <template>
     <button @click="setLocale('ua')">
-        <img src="https://sites.google.com/site/simvoliukraieni899/_/rsrc/1390405058112/home/derzavni-simvoli-ukraieni/derzavnij-prapor-ukraieni/1_558.jpg" alt=""
-             :class="{ compact: compact }"
+        <img
+            src="https://sites.google.com/site/simvoliukraieni899/_/rsrc/1390405058112/home/derzavni-simvoli-ukraieni/derzavnij-prapor-ukraieni/1_558.jpg"
+            alt=""
+            :class="{ compact: compact }"
         >
     </button>
     <button @click="setLocale('en')">
@@ -15,10 +17,10 @@
 export default {
     name: "Localization",
     props: {
-      compact: {
-          type: Boolean,
-          default: false
-      }
+        compact: {
+            type: Boolean,
+            default: false
+        }
     },
     methods: {
         setLocale(locale) {
@@ -29,6 +31,11 @@ export default {
 </script>
 
 <style scoped>
-img {height:50px;}
-img.compact {height:15px;}
+img {
+    height: 50px;
+}
+
+img.compact {
+    height: 15px;
+}
 </style>
