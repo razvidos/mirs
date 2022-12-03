@@ -1,20 +1,18 @@
 <template>
-    <router-link to="/curs">
-        <v-btn>Курсова</v-btn>
-    </router-link>
-    <router-link to="/laba1">
-        <v-btn>Лаба 1</v-btn>
-    </router-link>
-    <router-link to="/laba2">
-        <v-btn>Лаба 2</v-btn>
-    </router-link>
-    <router-link to="/laba3">
-        <v-btn>Лаба 3</v-btn>
+    <router-link v-for="item in items" :to="'/' + item">
+        <v-btn>
+            <div v-text="$trans.get('app.nav.' + item)"></div>
+        </v-btn>
     </router-link>
 </template>
 
 <script>
 export default {
-    name: "Navigation"
+    name: "Navigation",
+    data() {
+        return {
+            items: ['curs', 'laba1', 'laba2', 'laba3'],
+        }
+    },
 }
 </script>

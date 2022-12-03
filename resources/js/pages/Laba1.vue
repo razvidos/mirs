@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-sheet>
-            <v-card-title v-text="$trans.get('laba1.pageName')"></v-card-title>
+            <v-card-title v-text="$trans.get('app.nav.laba1')"></v-card-title>
             <v-card-text class="d-flex align-center">
                 <div class="pa-2 text-h3" v-text="$trans.get('laba1.author.last_name')"></div>
                 <div class="pa-2 ml-auto">
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Localization from "./Localization.vue"
+import Localization from "../components/Localization.vue"
 export default {
     name: "Application",
     components: {Localization},

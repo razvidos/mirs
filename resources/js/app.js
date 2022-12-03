@@ -5,10 +5,10 @@ import 'vuetify/styles'
 import axios from 'axios';
 import Lang from 'lang.js';
 
-import Cursova from "./components/Cursova.vue";
-import Laba1 from "./components/Laba1.vue";
-import Laba2 from "./components/Laba2.vue";
-import Laba3 from "./components/Laba3.vue";
+import Cursova from "./pages/Cursova.vue";
+import Laba1 from "./pages/Laba1.vue";
+import Laba2 from "./pages/Laba2.vue";
+import Laba3 from "./pages/Laba3.vue";
 import App from "./App.vue";
 
 const router = createRouter({

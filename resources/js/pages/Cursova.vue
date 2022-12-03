@@ -4,8 +4,8 @@
 </template>
 
 <script>
-import Console from "./cursova/Console.vue";
-import HotelList from "./cursova/HotelList.vue";
+import Console from "../components/cursova/Console.vue";
+import HotelList from "../components/cursova/HotelList.vue";
 
 export default {
     name: "Application",

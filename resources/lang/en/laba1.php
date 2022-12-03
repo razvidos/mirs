@@ -5,5 +5,4 @@ return [
         'name' => 'Ihor',
         'last_name' => 'Solomianiy',
     ],
-    'pageName' => 'Laba 1',
 ];
