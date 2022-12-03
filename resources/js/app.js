@@ -25,23 +25,10 @@ const vuetify = createVuetify({
     ssr: true,
 })
 
-const default_locale = window.default_language;
-const fallback_locale = window.fallback_locale;
 const lang = new Lang({
-    messages:{
-        'en.l1': {
-            'pageName': 'Laba 1',
-            'name': 'Ihor',
-            'last_name': 'Solomianiy',
-        },
-        'ua.l1': {
-            'pageName': 'Лаба 1',
-            'name': 'Ігор',
-            'last_name': 'Соломʼяний',
-        }
-    },
-    locale: default_locale,
-    fallback: fallback_locale
+    messages: translations,
+    locale: defaultLocale,
+    fallback: fallbackLocale
 });
 
 const app = createApp(App);
@@ -49,5 +36,5 @@ app.use(vuetify);
 
 app.use(router);
 app.config.globalProperties.$http = axios;
-app.config.globalProperties.trans = lang;
+app.config.globalProperties.$trans = lang;
 app.mount('#app');

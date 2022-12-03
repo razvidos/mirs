@@ -15,6 +15,11 @@
     <link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
     <script src="{{ asset('/sw.js') }}"></script>
+    <script type="application/javascript">
+        let defaultLocale = "{{ App::getLocale() }}",
+            fallbackLocale = "{{ config('app.fallback_locale') }}",
+            translations = @json($messages);
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (!navigator.serviceWorker.controller) {
